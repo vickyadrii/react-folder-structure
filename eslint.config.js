@@ -58,9 +58,9 @@ export default defineConfig([
             "@typescript-eslint/no-empty-function": ["warn", { allow: ["constructors"] }],
 
             /* ----------------------------- Import Hygiene ----------------------------- */
-            "import-x/no-duplicates": "off", // Disabled for Next.js bundler resolution
-            "import-x/no-unresolved": "off", // Disabled for Next.js bundler resolution
-            "import-x/named": "off", // Disabled for Next.js bundler resolution
+            "import-x/no-duplicates": "off", // Handled by TypeScript
+            "import-x/no-unresolved": "off", // Handled by TypeScript
+            "import-x/named": "off", // Handled by TypeScript
 
             /* ----------------------------- SonarJS Rules ----------------------------- */
             "sonarjs/cognitive-complexity": ["error", 20], // Higher for React components
@@ -70,7 +70,7 @@ export default defineConfig([
 
             /* ------------------------------ React Rules ------------------------------ */
             ...reactHooks.configs.recommended.rules,
-            "react-refresh/only-export-components": "off", // Next.js doesn't use React Refresh
+            "react-refresh/only-export-components": "off",
 
             /* ----------------------------- Security Rules ----------------------------- */
             "security-node/detect-sql-injection": "error",
