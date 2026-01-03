@@ -18,17 +18,12 @@ const NotFound = () => {
                 </div>
 
                 <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-                    <Button
-                        variant="outline"
-                        size="lg"
-                        onClick={() => navigate(-1)}
-                        className="gap-2 border-sky-200 hover:bg-sky-50 hover:text-sky-600 dark:border-sky-800 dark:hover:bg-sky-950/50 dark:hover:text-sky-400"
-                    >
+                    <Button variant="outline" size="lg" onClick={() => navigate(-1)}>
                         <ArrowLeft className="h-4 w-4" />
                         Go Back
                     </Button>
 
-                    <Button size="lg" onClick={() => navigate("/")} className="gap-2 bg-sky-500 text-white shadow-sky-200 hover:bg-sky-600 dark:shadow-none">
+                    <Button size="lg" onClick={() => navigate("/")}>
                         <Home className="h-4 w-4" />
                         Back to Home
                     </Button>
