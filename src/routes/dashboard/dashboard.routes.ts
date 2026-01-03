@@ -5,5 +5,6 @@ export const dashboardRoutes: RouteObject[] = [
     {
         path: "/",
         Component: DashboardPage,
+        handle: { title: "Dashboard" },
     },
 ];

@@ -1,7 +1,9 @@
 import type { RouteObject } from "react-router";
+import { AppLayout } from "@/layouts";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { dashboardRoutes } from "./dashboard/dashboard.routes";
-import { AppLayout } from "@/layouts";
+import { settingsRoutes } from "./settings/settings.routes";
+import { usersRoutes } from "./users/users.routes";
 
 export const privateRoutes: RouteObject[] = [
     {
@@ -9,7 +11,7 @@ export const privateRoutes: RouteObject[] = [
         children: [
             {
                 Component: AppLayout,
-                children: [...dashboardRoutes],
+                children: [...dashboardRoutes, ...usersRoutes, ...settingsRoutes],
             },
         ],
     },

@@ -1,0 +1,23 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="200" cy="150" r="100" fill="#e0f2fe" />
+  
+  <!-- Left 4 -->
+  <path d="M125 100 L85 160 H145" stroke="#38bdf8" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M125 100 V200" stroke="#38bdf8" stroke-width="24" stroke-linecap="round" />
+  
+  <!-- Middle 0 -->
+  <circle cx="210" cy="150" r="45" stroke="#0ea5e9" stroke-width="24" />
+  
+  
+  <!-- Right 4 -->
+  <path d="M315 100 L275 160 H335" stroke="#38bdf8" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M315 100 V200" stroke="#38bdf8" stroke-width="24" stroke-linecap="round" />
+
+  <!-- Decorative Elements -->
+  <circle cx="60" cy="60" r="15" fill="#bae6fd" opacity="0.8" />
+  <circle cx="340" cy="240" r="20" fill="#bae6fd" opacity="0.8" />
+  <rect x="320" y="40" width="25" height="25" rx="6" fill="#7dd3fc" transform="rotate(15 332.5 52.5)" opacity="0.8" />
+  <rect x="60" y="220" width="20" height="20" rx="4" fill="#7dd3fc" transform="rotate(-15 70 230)" opacity="0.8" />
+  <path d="M170 230 Q200 245 230 230" stroke="#7dd3fc" stroke-width="6" stroke-linecap="round" />
+</svg>

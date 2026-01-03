@@ -1,9 +1,7 @@
+import { Dashboard } from "@/features";
+
 const DashboardPage = () => {
-    return (
-        <div>
-            <p>DashboardPage</p>
-        </div>
-    );
+    return <Dashboard />;
 };
 
 export default DashboardPage;
