@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useMatches } from "react-router";
-import type { IRouteHandle } from "@/types/route";
+import type { IRouteHandle } from "@/types";
 
 export function useDocumentTitle() {
     const matches = useMatches();

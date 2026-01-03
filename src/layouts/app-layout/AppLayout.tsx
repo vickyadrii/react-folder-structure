@@ -1,6 +1,6 @@
 import { Outlet, useMatches } from "react-router";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import type { IRouteHandle } from "@/types/route";
+import type { IRouteHandle } from "@/types";
 import { AppSidebar } from "./AppSidebar";
 
 const AppLayout = () => {
