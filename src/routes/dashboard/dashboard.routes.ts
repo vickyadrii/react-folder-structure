@@ -3,7 +3,7 @@ import { DashboardPage } from "@/pages";
 
 export const dashboardRoutes: RouteObject[] = [
     {
-        path: "/",
+        path: "/dashboard",
         Component: DashboardPage,
         handle: { title: "Dashboard" },
     },

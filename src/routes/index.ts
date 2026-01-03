@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, redirect } from "react-router";
 import { RootLayout } from "@/layouts/RootLayout";
 import { NotFoundPage } from "@/pages";
 import { privateRoutes } from "./private.routes";
@@ -8,6 +8,10 @@ export const router = createBrowserRouter([
     {
         Component: RootLayout,
         children: [
+            {
+                path: "/",
+                loader: () => redirect("/dashboard"),
+            },
             ...publicRoutes,
             ...privateRoutes,
             {
