@@ -1,4 +1,4 @@
-import { Spin } from "@/components/spin";
+import { Spin } from "@/components/common";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuthStore } from "@/stores";
 import LoginForm from "./components/LoginForm";

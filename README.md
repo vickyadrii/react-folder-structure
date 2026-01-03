@@ -20,6 +20,55 @@ A modern React application with a scalable folder structure, built with React 19
 - 📏 **Prettier + ESLint** - Code formatting and linting
 - 🐶 **Husky** - Git hooks for code quality
 
+
+## Project Structure
+
+Here is the detailed project structure folder:
+
+```
+src/
+├── components/         # Reusable components
+│   ├── common/         # Common components
+│   └── ui/             # UI components
+├── configs/            # Configuration files and constants
+├── constants/          # App-wide constants and mock data
+├── features/           # Feature-based modules
+│   ├── [feat-a]/           # a feature
+│   │   └── [component-a]/     # a component
+│   │       ├── components/    # Local components (LoginForm, etc.)
+├── hooks/              # Custom React hooks
+├── layouts/            # Layout components
+│   ├── app-layout/     # Main app layout with sidebar
+│   ├── auth-layout/    # Authentication layout (split-screen design)
+│   └── RootLayout.tsx  # Root layout wrapper
+├── lib/                # Utility functions and helpers
+│   └── utils.ts        # Utility functions (cn, isTokenValid, etc.)
+├── pages/              # Page components (route-level)
+├── routes/             # Route configurations
+├── services/           # API services and external integrations
+├── stores/             # Zustand state management
+├── types/              # TypeScript types and interfaces
+```
+
+## Folder Structure Explanation
+
+- **components/** - Shared/reusable components used across the app
+  - **common/** - Reusable Common component
+  - **ui/** - Reusable UI component (Button, Input, Form, Dialog, Spinner, etc.)
+- **configs/** - Configuration files for various services
+- **constants/** - App constants, enums, and mock data
+- **features/** - Feature-specific components organized by domain
+  - Each feature can have its own **components/** folder for local components
+  - Example: `features/auth/login/components/LoginForm.tsx`
+- **hooks/** - Custom React hooks for shared logic
+- **layouts/** - Layout wrappers for different sections of the app
+- **lib/** - Utility functions, helpers, and third-party library configurations
+- **pages/** - Page-level components that represent routes
+- **routes/** - Route configuration and protected route logic
+- **services/** - API calls and external service integrations
+- **stores/** - Zustand state management stores with persist middleware
+- **types/** - TypeScript type definitions and interfaces
+
 ## Getting Started
 
 Here are the steps below to run this project.
@@ -101,64 +150,6 @@ npm run format
 # or
 yarn format
 ```
-
-## Project Structure
-
-Here is the detailed project structure folder:
-
-```
-src/
-├── components/          # Reusable UI components
-│   └── ui/             # Shadcn UI components (Button, Dialog, etc.)
-├── configs/            # Configuration files and constants
-├── constants/          # App-wide constants and mock data
-├── features/           # Feature-based modules
-│   ├── auth/          # Authentication feature components
-│   ├── dashboard/     # Dashboard feature components
-│   ├── errors/        # Error pages (404, etc.)
-│   ├── settings/      # Settings feature components
-│   └── users/         # Users feature components
-├── hooks/              # Custom React hooks
-├── layouts/            # Layout components
-│   ├── app-layout/    # Main app layout with sidebar
-│   ├── auth-layout/   # Authentication layout
-│   └── RootLayout.tsx # Root layout wrapper
-├── lib/                # Utility functions and helpers
-├── pages/              # Page components (route-level)
-│   ├── auth/          # Auth pages (Login, Register)
-│   ├── dashboard/     # Dashboard pages
-│   ├── errors/        # Error pages
-│   ├── settings/      # Settings pages
-│   └── users/         # Users pages
-├── routes/             # Route configurations
-│   ├── auth/          # Auth routes
-│   ├── dashboard/     # Dashboard routes
-│   ├── settings/      # Settings routes
-│   ├── users/         # Users routes
-│   ├── index.ts       # Main router configuration
-│   ├── private.routes.ts  # Private routes
-│   ├── public.routes.ts   # Public routes
-│   └── ProtectedRoute.tsx # Protected route wrapper
-├── services/           # API services and external integrations
-├── types/              # TypeScript types and interfaces
-├── App.tsx             # Root App component
-├── index.css           # Global styles and Tailwind configuration
-└── main.tsx            # App entry point
-```
-
-## Folder Structure Explanation
-
-- **components/** - Shared/reusable components used across the app
-- **configs/** - Configuration files for various services
-- **constants/** - App constants, enums, and mock data
-- **features/** - Feature-specific components (not shared across features)
-- **hooks/** - Custom React hooks for shared logic
-- **layouts/** - Layout wrappers for different sections of the app
-- **lib/** - Utility functions, helpers, and third-party library configurations
-- **pages/** - Page-level components that represent routes
-- **routes/** - Route configuration and protected route logic
-- **services/** - API calls and external service integrations
-- **types/** - TypeScript type definitions and interfaces
 
 ## Built With
 
