@@ -1,5 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -13,6 +14,7 @@ const formSchema = z.object({
 });
 
 const LoginForm = () => {
+    const navigate = useNavigate();
     const { login } = useAuthStore();
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -24,6 +26,7 @@ const LoginForm = () => {
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         await login(values);
+        navigate("/dashboard");
     };
     return (
         <Form {...form}>
@@ -36,7 +39,7 @@ const LoginForm = () => {
                             <FormItem>
                                 <FormLabel>Username</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="shadcn" {...field} />
+                                    <Input placeholder="Enter your username" {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>

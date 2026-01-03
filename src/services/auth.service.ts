@@ -1,9 +1,9 @@
 import { api } from "@/configs";
-import type { ILoginDto } from "@/types";
+import type { ILoginDto, IUser } from "@/types";
 
 export const authService = {
-    login: async (payload: ILoginDto) => {
-        const response = await api.post("/auth/login", payload);
+    login: async (payload: ILoginDto): Promise<IUser> => {
+        const response = await api.post<IUser>("/auth/login", payload);
         return response.data;
     },
 };

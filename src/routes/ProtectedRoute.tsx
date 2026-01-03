@@ -1,10 +1,16 @@
 import { Navigate, Outlet } from "react-router";
+import { isTokenValid } from "@/lib/utils";
+import { useAuthStore } from "@/stores";
 
 export const ProtectedRoute = () => {
-    // note: replace with your real auth logic, e.g., from context or a hook
-    const isAuthenticated = true;
+    const { isAuthenticated, user, logout } = useAuthStore();
 
-    if (!isAuthenticated) {
+    const hasValidToken = isTokenValid(user?.accessToken);
+
+    if (!isAuthenticated || !hasValidToken) {
+        if (isAuthenticated && !hasValidToken) {
+            logout();
+        }
         return <Navigate to="/login" replace />;
     }
 

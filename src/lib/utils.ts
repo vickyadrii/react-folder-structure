@@ -11,3 +11,16 @@ export const generateRandomNumber = () => {
     crypto.getRandomValues(array);
     return array[0];
 };
+
+export const isTokenValid = (token: string | undefined): boolean => {
+    if (!token) return false;
+
+    try {
+        const payload = JSON.parse(atob(token.split(".")[1]));
+        const expiration = payload.exp * 1000; // Convert to milliseconds
+
+        return Date.now() < expiration;
+    } catch {
+        return false;
+    }
+};
