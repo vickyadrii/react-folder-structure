@@ -1,4 +1,4 @@
-# React Folder Structure for You 
+# React Boilerplate
 
 A modern React application with a scalable folder structure, built with React 19, TypeScript, Vite, React Router v7, and Tailwind CSS v4.
 
